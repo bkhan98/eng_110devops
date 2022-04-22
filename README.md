@@ -110,3 +110,8 @@ Vagrant provides easy to configure, reproducible, and portable work environments
     > save your changes
     >to immediately apply all changes to bash_profile, use the source command
       - `source ~/.bash_profile`
+
+## Reverse proxy
+using Nginx as a Reverse Proxy 
+use nginx to listen to on port 3000 send to 80
+How to configure 
