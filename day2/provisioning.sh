@@ -16,7 +16,7 @@ sudo apt-get install nodejs -y
 
 sudo apt-get install python-software-properties -y
 
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 
 sudo apt-get install -y nodejs
 
@@ -25,3 +25,4 @@ sudo apt-get update -y
 npm install
 
 npm start &
+# the & makes the command run in the background
