@@ -43,29 +43,28 @@
 14. Insert the following text, `npm start &`.
     > *runs the npm in the background.*
 
-15. To save and exit `nano` mode, hold `ctrl` and press `x`, then press `y` and `enter`.
+1. To save and exit `nano` mode, hold `ctrl` and press `x`, then press `y` and `enter`.
     > *This exits the editing mode and saves the file too.*
 
-16. Now type `sudo chmod +x provisioning.sh` into the terminal.
-    > *This allows our .sh bash file to be executable.
+2. Now type `sudo chmod +x provisioning.sh` into the terminal.
+    > *This allows our .sh bash file to be executable.*
 
-17.  To be able to run the script upon the `vagrant up` command we need to edit "Vagrantfile" (which is without any extentions) to notify it to run our local script within the vitrtual machine
-    > *The next step will make `vagrant up` command execute our "provisioning.sh" inside the virtual machine*
-18.  Open Vagrantfile for editing using the command, `nano Vagrantfile`. 
+3.  To be able to run the script upon the `vagrant up` command we need to edit "Vagrantfile" (which is without any extentions) to notify it to run our local script within the vitrtual machine
+    > *The next step will make `vagrant up` command execute our "provisioning.sh" insid the vertual machine*
+4.  Thus, we add the following script into "Vagrantfile":
 
-19. Thus, we add the following script into "Vagrantfile":
         Vagrant.configure("2") do |config|
-
+            # create a VM named buntu 
             config.vm.box = "ubuntu/xenial64"
-
+            # create a private network with provided ip address
             config.vm.network "private_network", ip: "192.168.10.10"
-
+            # execute the provisioning.sh file at boot after typing `vagrant up`
             config.trigger.after :up do |trigger|
                 config.vm.provisioning "shell", path: "provisioning.sh"
             end
         end
-        
-20.  To save and exit `nano` mode, hold `ctrl` and press `x`, then press `y` and `enter`.
+
+5.  To save and exit `nano` mode, hold `ctrl` and press `x`, then press `y` and `enter`.
     > *This exits the editing mode and saves the file too.*
 
 * The command below is only needed when automation is adopted, for manual installation of nginx this step is not to be included in the "provisioning.sh file:
@@ -73,3 +72,7 @@
         config.trigger.after :up do |trigger|
             config.vm.provision "shell", path: "provisioning.sh"
         end
+
+### Notes 
+#### What is Provisioning?
+Provisioning is the process of configuring and deploying an information technology (IT) system resource either locally or in the cloud.

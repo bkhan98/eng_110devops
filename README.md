@@ -86,6 +86,38 @@ A virtual machine (VM) is a virtual environment that functions as a virtual comp
   >- to give permission to nginx 'sudo chmod +x file.sh'
   >- execute the file.sh 'sudo ./file.sh'
 
+- `root user` is not best practice as it doesn't double check permissions
+- `chmod permission file_name` - Change file permissions
+
+  - `+` = ADD
+  - `-` = REMOVE
+  - `=` = SETS/OVERRIDES EARLIER PERMISSIONS
+
+---
+
+- `r` = read permissions
+- `w` = write permissions
+- `x` = execute permissions
+- `-` = no permissions
+
+---
+
+- `0` = No permissions
+- `1` = Execute permissions
+- `2` = Write permissions
+- `3` = Execute + write permissions
+- `4` = Read permissions
+- `5` = Read + execute permissions
+- `6` = Read + write permissions
+- `7` = Read + write + execute permissions
+
+---
+
+- Absolute numeric mode example `400`
+  - First number is owner permissions
+  - Second number is usergroup permissions
+  - Third number is world permissions
+
 ## What is virtualisation?
 Virtualization is a process that allows for more efficient utilization of physical computer hardware and is the foundation of cloud computing.
 
@@ -111,7 +143,50 @@ Vagrant provides easy to configure, reproducible, and portable work environments
     >to immediately apply all changes to bash_profile, use the source command
       - `source ~/.bash_profile`
 
-## Reverse proxy
+#### Reverse proxy
 using Nginx as a Reverse Proxy 
 use nginx to listen to on port 3000 send to 80
 How to configure 
+
+#### VM (vitual machine) Commands 
+
+
+To familarize yourself with installation of VirtualBox, Ruby and Vagrant go to step_by_step_documentation folder.
+
+- `ruby --version` - ensure successful installation of Ruby.
+- `vagrant --version` - ensure successful installation of Vagrant.
+- `cd ..\<Vagrantfile_dir>\` - where vagrant tells VirtualBox to start the VM from.
+- `vagrant status` - check current directory VM statusm
+- `vagrant global-status` - check all VMs statusm
+- `vagrant up` - start VM.
+- `vagrant ssh` - get into the VM.
+
+#### When encountered with errors use the following:
+- `vagrant reload` - destroy + up.
+- `vagrant destroy` - remove VM.
+
+#### Commands for Linux -Ubuntu distro 
+- `cat` - Allows user to view contents of a file.
+- `cp location_file_name to destination_path` - Allows the user to copy a file from one location to another.
+- `mv file_name destination_path/renamed_file` - Allows the user to move file to a new location and rename the file (optional).
+- `rm file or folder_name` - Deletes file/folder.
+  - `rm -rf file or folder_name` - Force delete.
+- `top` - Check running processes (ctrl + c to exit).
+  - `ps aux` - More detailed `top`.
+- `kill pid` - End task/process.
+
+#### Processes
+- `fg` - Job control, allows processes to run in the foreground.
+- `bg` - Job control, allows processes to run in the background
+- `CTRL-Z` - Stops the foreground process and places it in the background as a stopped process
+- `wait` - Job control, suspends script execution until all jobs running in background have terminated
+  - `wait job_identifier - wait%1` - optional job identifier argument
+- Running in background example: `sleep 100 &`
+  - process command `&`
+- `jobs` - Shows currently running jobs
+- `kill` - Destroys program
+
+#### data sent from host to VM
+
+- `config.vm.provision "file", source: "~/.gitconfig", destination: ".gitconfig"` - This is for files. Placed in Vagrantfile (creates location if it doesn't exist)
+- `config.vm.synced_folder "/src_folder", "/vm_location"` - This is for folders. Placed in Vagrantfile (creates location if it doesn't exist)
