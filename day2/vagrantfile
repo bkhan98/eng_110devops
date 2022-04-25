@@ -2,20 +2,20 @@ Vagrant.configure("2") do |config|
 # Creating a virtual machine 
 
   config.vm.box = "bento/ubuntu-18.04"
-# the command on the left hand side configures what the machine will be brought up against
-# the string on the right hand-side should be the name of the installed box
-# which can also be found in "https://www.vagrantup.com/vagrantcloud"
+  # the command on the left hand side configures what the machine will be brought up against
+  # the string on the right hand-side should be the name of the installed box
+  # which can also be found in "https://www.vagrantup.com/vagrantcloud"
 
   config.vm.network "private_network", ip: "192.168.56.10"
-# configures the network on the machine and sets up a private network with the assigned ip
+  # configures the network on the machine and sets up a private network with the assigned ip
   
   # config.vm.provision "file", source: "~/.gitconfig", destination: ".gitconfig"
 
   config.vm.synced_folder ".", "/home/vagrant/app"
-# config.vm.synced_folder sync a directory from a local machine to VM
-# so basically we want the folder to be available in the VM
-# "." means within the current directory we want it, and the 
-# "/home/vagrant/app" specifies the current directory to in the VM.
+  # config.vm.synced_folder sync a directory from a local machine to VM
+  # so basically we want the folder to be available in the VM
+  # "." means within the current directory we want it, and the 
+  # "/home/vagrant/app" specifies the current directory to in the VM.
 
   config.vm.provision "shell", path: "provisioning.sh"
   # config.vm.provision configures that we want to runa provision file which is named "provision.sh"

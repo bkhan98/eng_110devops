@@ -186,7 +186,12 @@ To familarize yourself with installation of VirtualBox, Ruby and Vagrant go to s
 - `jobs` - Shows currently running jobs
 - `kill` - Destroys program
 
-#### data sent from host to VM
+#### Data sent from host to VM
 
 - `config.vm.provision "file", source: "~/.gitconfig", destination: ".gitconfig"` - This is for files. Placed in Vagrantfile (creates location if it doesn't exist)
 - `config.vm.synced_folder "/src_folder", "/vm_location"` - This is for folders. Placed in Vagrantfile (creates location if it doesn't exist)
+
+
+#### Ruby Testing 
+- Start by changing directory to test directory and install Ruby with the folloowing command, `gen install dundler`.
+- 

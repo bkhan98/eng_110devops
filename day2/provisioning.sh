@@ -3,8 +3,10 @@
 
 sudo apt-get update -y
 # runs update
+
 sudo apt-get upgrade -y
 # runs upgrade
+
 sudo apt-get install nginx -y
 # install nginx (used as a webserver)
 
@@ -28,6 +30,8 @@ sudo apt-get install -y nodejs
 sudo apt-get update -y
 
 npm install
+
+rm -rf /etcnginx/sites-available/default
 
 npm start &
 # the & makes the command run in the background
