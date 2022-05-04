@@ -1,4 +1,4 @@
-# Introduction to Cloud Computing:
+# Introduction to Cloud Computing (AWS in our case):
 Cloud computing is a term referred to storing and accessing data over the internet. It doesn’t store any data on the hard disk of your personal computer. In cloud computing, you can access data from a remote server.
 
 Simply put, cloud computing is the delivery of computing services—including servers, storage, databases, networking, software, analytics, and 
@@ -23,3 +23,7 @@ Cost saving is one of the biggest Cloud Computing benefits. It helps you to save
 ## AWS Security - Keys - IAM role:
 An IAM role is an IAM identity that you can create in your account that has specific permissions. An IAM role is similar to an IAM user, in that it is an AWS identity with permission policies that determine what the identity can and cannot do in AWS.
 
+## Availability zones (why we need 3 instead of 1):
+* An availability zone is a logical data center in a region available for use by any AWS customer. Each zone in a region has redundant and separate power, networking and connectivity to reduce the likelihood of two zones failing simultaneously. 
+
+High availability: 
