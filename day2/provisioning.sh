@@ -22,7 +22,7 @@ cd app/app
 sudo apt-get install python-software-properties -y
 # it installs the python app software properties without any prompts
 
-curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 # this downloads the nodejs package  with version 6
 
 sudo apt-get install -y nodejs

@@ -118,18 +118,6 @@ A virtual machine (VM) is a virtual environment that functions as a virtual comp
   - Second number is usergroup permissions
   - Third number is world permissions
 
-## What is virtualisation?
-Virtualization is a process that allows for more efficient utilization of physical computer hardware and is the foundation of cloud computing.
-
-## What is a VirtualBox?
-A VirtualBox or VB is a software virtualization package that installs on an operating system as an application. VirtualBox allows additional operating systems to be installed on it, as a Guest OS, and run in a virtual environment.
-
-## What is Vagrant?
-Vagrant is a tool for building and managing virtual machine environments in a single workflow. With an easy-to-use workflow and focus on automation, Vagrant lowers development environment setup time, increases production parity, and makes the "works on my machine" excuse a relic of the past.
-
-## Why Vagrant?
-Vagrant provides easy to configure, reproducible, and portable work environments built on top of industry-standard technology and controlled by a single consistent workflow to help maximize the productivity and flexibility of you and your team.
-
 ###! Env Variable - as soon as you leave the env the variable is gone
 - How to check existing `Env var`, `printenv`
 - How to print specific env var
@@ -143,14 +131,29 @@ Vagrant provides easy to configure, reproducible, and portable work environments
     >to immediately apply all changes to bash_profile, use the source command
       - `source ~/.bash_profile`
 
+## What is virtualisation?
+Virtualization is a process that allows for more efficient utilization of physical computer hardware and is the foundation of cloud computing.
+
+## What is a VirtualBox?
+A VirtualBox or VB is a software virtualization package that installs on an operating system as an application. VirtualBox allows additional operating systems to be installed on it, as a Guest OS, and run in a virtual environment.
+
+## What is Vagrant?
+Vagrant is a tool for building and managing virtual machine environments in a single workflow. With an easy-to-use workflow and focus on automation, Vagrant lowers development environment setup time, increases production parity, and makes the "works on my machine" excuse a relic of the past.
+
+## Why Vagrant?
+Vagrant provides easy to configure, reproducible, and portable work environments built on top of industry-standard technology and controlled by a single consistent workflow to help maximize the productivity and flexibility of you and your team.
+
+#### Nginx
+NGINX is open source software for web serving, reverse proxying, caching, load balancing, media streaming, and more. It started out as a web server designed for maximum performance and stability.
+> ##### Webserver
+On the hardware side, a web server is a computer that stores web server software and a website's component files (for example, HTML documents, images, CSS stylesheets, and JavaScript files). A web server connects to the Internet and supports physical data interchange with other devices connected to the web.
+
 #### Reverse proxy
 using Nginx as a Reverse Proxy 
 use nginx to listen to on port 3000 send to 80
 How to configure 
 
 #### VM (vitual machine) Commands 
-
-
 To familarize yourself with installation of VirtualBox, Ruby and Vagrant go to step_by_step_documentation folder.
 
 - `ruby --version` - ensure successful installation of Ruby.
